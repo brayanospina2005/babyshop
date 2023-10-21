@@ -125,6 +125,7 @@ function DashboardTab() {
                                 </div>
                             </div>
                         </TabPanel>
+
                         <TabPanel>
                             {/* <Order order={order} setOrder={setOrder} setLoading={setLoading} /> */}
                             <div className="relative overflow-x-auto mb-16">
@@ -212,6 +213,7 @@ function DashboardTab() {
                                  
                             </div>
                         </TabPanel>
+                        
                         <TabPanel>
                             {/* <User addressInfo={addressInfo} setAddressInfo={setAddressInfo} setLoading={setLoading} /> */}
                             <div className="relative overflow-x-auto mb-10">
