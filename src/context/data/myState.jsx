@@ -50,7 +50,10 @@ function myState(props) {
     try {
       const productRef = collection(fireDB, 'products');
       await addDoc(productRef, products)
-      toast.success("Product Add successfully")
+      toast.success("Product Add successfully");
+      setTimeout(() => {
+        window.location.href = "/dashboard"
+      }, 800);
       getProductData();
       setLoading(false)
 
@@ -58,7 +61,7 @@ function myState(props) {
       console.log(error)
       setLoading(false)
     }
-    setProducts("")
+    /* setProducts("") */
   }
 
   const [product, setProduct] = useState( [] );
