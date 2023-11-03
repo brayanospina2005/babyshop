@@ -1,6 +1,8 @@
 import React from 'react'
+import myContext from '../../../context/data/myContext';
 
 function AddProduct() {
+    const context = useContext(myContext);
     return (
         <div>
             <div className=' flex justify-center items-center h-screen'>
