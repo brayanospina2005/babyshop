@@ -58,7 +58,7 @@ export default function Navbar() {
                     className="-m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400"
                     onClick={() => setOpen(false)}
                   >
-                    <span className="sr-only">Close menu</span>
+                    <span className="sr-only">Cerrar menu</span>
                     <RxCross2 />
                   </button>
                 </div>
@@ -137,7 +137,13 @@ export default function Navbar() {
               <div className="ml-4 flex lg:ml-0">
                 <Link to={'/'} className='flex'>
                   <div className="flex ">
-                    <h1 className=' text-2xl font-bold text-black  px-2 py-1 rounded' style={{ color: mode === 'dark' ? 'white' : '', }}>E-Bharat</h1>
+                    
+                    <img
+                      className="h-[4rem] w-auto sm:h-[5rem]"
+                      src="/src/assets/LOGO VS.png"
+                      alt="Workflow"
+                    />
+            
                   </div>
                 </Link>
               </div>
@@ -168,7 +174,7 @@ export default function Navbar() {
                 <div className="hidden lg:ml-8 lg:flex">
                   <a href="#" className="flex items-center text-gray-700 ">
                     <img
-                      src="https://ecommerce-sk.vercel.app/img/indiaflag.png"
+                      src="https://img.freepik.com/vector-gratis/ilustracion-bandera-columbia_53876-27125.jpg?w=1380&t=st=1699888713~exp=1699889313~hmac=2f1314f925163d3a3e29b76a8f8335b2aa484ad02b91454382991c39465003a3"
                       alt=""
                       className="block h-auto w-5 flex-shrink-0"
                     />

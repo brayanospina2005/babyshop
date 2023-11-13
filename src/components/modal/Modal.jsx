@@ -20,7 +20,7 @@ export default function Modal() {
                     onClick={openModal}
                     className="w-full  bg-violet-600 py-2 text-center rounded-lg text-white font-bold"
                 >
-                    Buy Now
+                    Compra Ahora
                 </button>
             </div>
 

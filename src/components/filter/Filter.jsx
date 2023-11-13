@@ -28,10 +28,10 @@ function Filter() {
                     </div>
                     <div className="flex items-center justify-between mt-4">
                         <p className="font-medium">
-                            Filters
+                            Filtrar
                         </p>
                         <button className="px-4 py-2 bg-gray-50hover:bg-gray-200 text-gray-800 text-sm font-medium rounded-md" style={{ color: mode === 'dark' ? 'white' : '' }}>
-                            Reset Filter
+                            Reiniciar
                         </button>
                     </div>
                     <div>

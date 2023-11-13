@@ -70,22 +70,22 @@ function DashboardTab() {
                                                     S.No
                                                 </th>
                                                 <th scope="col" className="px-6 py-3">
-                                                    Image
+                                                    Imagen
                                                 </th>
                                                 <th scope="col" className="px-6 py-3">
-                                                    Title
+                                                    Titulo
                                                 </th>
                                                 <th scope="col" className="px-6 py-3">
                                                     Price
                                                 </th>
                                                 <th scope="col" className="px-6 py-3">
-                                                    Category
+                                                    Categoria
                                                 </th>
                                                 <th scope="col" className="px-6 py-3">
-                                                    Date
+                                                    Fecha
                                                 </th>
                                                 <th scope="col" className="px-6 py-3">
-                                                    Action
+                                                    Accion
                                                 </th>
                                             </tr>
                                         </thead>
