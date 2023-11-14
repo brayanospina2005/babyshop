@@ -64,7 +64,7 @@ export default function Footer() {
                             {/* <h2 className="text-xl font-bold ml-2" style={{ color: mode === 'dark' ? 'white' : '' }}>E-bharat</h2> */}
                         </div>
                     </Link>
-                    <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4" style={{ color: mode === 'dark' ? 'white' : '' }}>© 2023 BOMBOM —
+                    <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4" style={{ color: mode === 'dark' ? 'white' : '' }}>© 2023 BAMBAM —
                         <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" className="text-gray-600 ml-1" target="_blank" style={{ color: mode === 'dark' ? 'white' : '' }}>www.bombom.com</a>
                     </p>
                     <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
