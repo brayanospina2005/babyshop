@@ -190,6 +190,7 @@ function ProductInfo() {
                                     </svg>
                                 </button>
                             </div>
+
                         </div>
                     </div>}
                 </div>

@@ -9,6 +9,7 @@ import Testimonial from '../../components/testimonial/Testimonial';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, deleteFromCart } from '../../redux/cartSlice';
 import { Link } from 'react-router-dom';
+import Whatsapp from '../../components/whatsapp/Whatsapp';
 
 function Home() {
   const dispatch = useDispatch();
@@ -35,6 +36,7 @@ function Home() {
       </div>
       <Track />
       <Testimonial />
+      <Whatsapp />
     </Layout>
   )
 }

@@ -82,7 +82,7 @@ export default function Navbar() {
 
                   {user ? <div className="flow-root">
                     <a onClick={logout} className="-m-2 block p-2 font-medium text-gray-900 cursor-pointer" style={{ color: mode === 'dark' ? 'white' : '', }}>
-                      Logout
+                      Salir
                     </a>
                   </div> : " "}
 
@@ -90,7 +90,7 @@ export default function Navbar() {
                     <Link to={'/'} className="-m-2 block p-2 font-medium text-gray-900 cursor-pointer">
                       <img
                         className="inline-block w-10 h-10 rounded-full"
-                        src="https://overreacted.io/static/profile-pic-c715447ce38098828758e525a1128b87.jpg"
+                        src="https://i.pinimg.com/474x/56/2e/be/562ebed9cd49b9a09baa35eddfe86b00.jpg"
                         alt="Dan_Abromov" />                                        </Link>
                   </div>
                 </div>
@@ -98,7 +98,7 @@ export default function Navbar() {
                 <div className="border-t border-gray-200 px-4 py-6">
                   <a href="#" className="-m-2 flex items-center p-2">
                     <img
-                      src="img/indiaflag.png"
+                      src="https://img.freepik.com/vector-gratis/ilustracion-bandera-columbia_53876-27125.jpg?w=1380&t=st=1699888713~exp=1699889313~hmac=2f1314f925163d3a3e29b76a8f8335b2aa484ad02b91454382991c39465003a3"
                       alt=""
                       className="block h-auto w-5 flex-shrink-0"
                     />
@@ -155,9 +155,12 @@ export default function Navbar() {
                     Productos
                   </Link>
 
-                  {user ? <Link to={'/order'} className="text-sm font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
+                  {user ?  <Link to={'/order'} className="text-sm font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
                     Orden
-                  </Link> : ""}
+                  </Link> :   <Link to={'/signup'}  className="text-sm font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
+                      Registrarse
+                    </Link>}
+                  
 
                   {user?.user?.email === 'prueba@gmail.com' ? 
                   <Link to={'/dashboard'} className="text-sm font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
@@ -167,7 +170,7 @@ export default function Navbar() {
                   
 
                   {user ? <a onClick={logout} className="text-sm font-medium text-gray-700 cursor-pointer  " style={{ color: mode === 'dark' ? 'white' : '', }}>
-                    Logout
+                    Salir
                   </a> : ""}
                 </div>
 

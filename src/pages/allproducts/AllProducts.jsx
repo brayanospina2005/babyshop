@@ -6,6 +6,7 @@ import myContext from '../../context/data/myContext'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart } from '../../redux/cartSlice'
 import { toast } from 'react-toastify'
+import Whatsapp from '../../components/whatsapp/Whatsapp'
 
 function Allproducts() {
   const context = useContext(myContext)
@@ -75,7 +76,9 @@ function Allproducts() {
 
             </div>
         </section >
+        <Whatsapp />
     </Layout>
+
   )
 }
 

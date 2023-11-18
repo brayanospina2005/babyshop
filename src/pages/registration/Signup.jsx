@@ -21,6 +21,12 @@ function Signup() {
             return toast.error("All fields are required")
         }
 
+         // Verificar longitud de la contraseña
+         if (password.length < 7) {
+            setLoading(false);
+            return toast.error("La contraseña es demasiado corta (mínimo 7 caracteres)");
+        }
+
         try {
             const users = await createUserWithEmailAndPassword(auth, email, password);
 
@@ -44,6 +50,7 @@ function Signup() {
         } catch (error) {
             console.log(error)
             setLoading(false)
+            toast.error("Error durante el registro");
             
         }
     }
@@ -53,7 +60,7 @@ function Signup() {
             {loading && <Loader />}
             <div className=' bg-gray-800 px-10 py-10 rounded-xl '>
                 <div className="">
-                    <h1 className='text-center text-white text-xl mb-4 font-bold'>Signup</h1>
+                    <h1 className='text-center text-white text-xl mb-4 font-bold'>Registrarse</h1>
                 </div>
                 <div>
                     <input type="text"
@@ -86,13 +93,16 @@ function Signup() {
                     <button
                         onClick={signup}
                         className=' bg-red-500 w-full text-white font-bold  px-2 py-2 rounded-lg'>
-                        Signup
+                        Registrarse
                     </button>
                 </div>
                 <div>
-                    <h2 className='text-white'>Have an account <Link className=' text-red-500 font-bold' to={'/login'}>Login</Link></h2>
+                    <h2 className='text-white'>Tienes Cuenta? <Link className=' text-red-500 font-bold' to={'/login'}>Login</Link></h2>
                 </div>
             </div>
+            <button className='fixed top-10 left-5 bg-gray-500 text-white font-bold px-2 py-2 rounded-lg'>
+                        <Link to={'/'}>Atrás</Link>
+                    </button>
         </div>
     )
 }
