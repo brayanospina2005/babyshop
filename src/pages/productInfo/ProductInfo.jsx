@@ -7,13 +7,16 @@ import { doc, getDoc } from 'firebase/firestore';
 import { toast } from 'react-toastify';
 import { addToCart } from '../../redux/cartSlice';
 import { fireDB } from '../../firebase/FirebaseConfig';
-
 function ProductInfo() {
     const context = useContext(myContext);
     const { loading, setLoading } = context;
 
     const [products, setProducts] = useState('');
     const params = useParams();
+   
+    
+
+
 
     const getProductData = async () => {
         setLoading(true)
@@ -36,6 +39,15 @@ function ProductInfo() {
 
     const dispatch = useDispatch()
     const cartItems = useSelector((state) => state.cart)
+  
+
+    
+    const [isZoomed, setIsZoomed] = useState(false);
+const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+
+
+    
     // console.log(cartItems)
 
     // add to cart
@@ -56,11 +68,47 @@ function ProductInfo() {
                 <div className="container px-5 py-32 mx-auto">
                     {products &&
                     <div className="lg:w-4/5 mx-auto flex flex-wrap">
-                        <img
-                            alt="ecommerce"
-                            className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-                            src={products.imageUrl}
-                        />
+                        {/* img */}
+                        <div
+    className="relative lg:w-1/2 w-full h-64"
+    onMouseEnter={() => setIsZoomed(true)}
+    onMouseLeave={() => setIsZoomed(false)}
+    onMouseMove={(e) => setMousePosition({ x: e.nativeEvent.offsetX, y: e.nativeEvent.offsetY })}
+>
+    <img
+        alt="ecommerce"
+        className="w-full h-full object-cover object-center rounded"
+        src={products.imageUrl}
+    />
+    {isZoomed && (
+       <div
+       className="absolute top-0 right-0 w-64 h-64 overflow-hidden border border-gray-300"
+       style={{
+           transform: `translate(${mousePosition.x - 32}px, ${mousePosition.y - 32}px)`,
+       }}
+   >
+       <div
+           className="w-full h-full"
+           style={{
+               backgroundImage: `url(${products.imageUrl})`,
+               backgroundSize: 'cover',
+               backgroundPosition: `calc(-${(mousePosition.x - 32) * 2}px + 50%) calc(-${(mousePosition.y - 32) * 2}px + 50%)`, // Ajusta el nivel de zoom según tus preferencias
+               transform: 'scale(2)', // Ajusta el nivel de zoom según tus preferencias
+               transformOrigin: 'top left',
+           }}
+       />
+   </div>
+   
+   
+   
+   
+   
+    
+    )}
+</div>
+
+
+
                         <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                             <h2 className="text-sm title-font text-gray-500 tracking-widest">
                                 BRAND NAME
