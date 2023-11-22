@@ -5,7 +5,7 @@ function HeroSection() {
     <div>
         <img 
         className="w-full h-96 object-contain object-center rounded-lg"
-        src="/src/assets/hero.jpeg" alt="" />
+        src="/src/assets/BANNER-WEB.jpg" alt="Banner" />
     </div>
   )
 }
